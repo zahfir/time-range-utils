@@ -1,0 +1,9 @@
+# Coverage reports
+coverage/
+*.lcov
+
+# Other common ignores
+node_modules/
+dist/
+.env
+*.log

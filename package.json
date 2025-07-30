@@ -1,0 +1,76 @@
+{
+  "name": "time-range-utils",
+  "version": "1.0.0",
+  "description": "A comprehensive TypeScript library for working with time ranges and date intervals.",
+  "keywords": [
+    "time",
+    "date",
+    "range",
+    "interval",
+    "typescript",
+    "utils",
+    "datetime",
+    "merge",
+    "overlap",
+    "split"
+  ],
+  "author": {
+    "name": "Zahfir Ayyoob",
+    "email": "zahfir.ayyoob@outlook.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zahfir/time-range-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zahfir/time-range-utils/issues"
+  },
+  "homepage": "https://github.com/zahfir/time-range-utils#readme",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --dts --format esm,cjs --minify",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "dev": "vitest watch",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint src/**/*.ts test/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts test/**/*.ts --fix",
+    "lint:check": "eslint src/**/*.ts test/**/*.ts --max-warnings 0",
+    "prepublishOnly": "pnpm run lint:check && pnpm run type-check && pnpm run test && pnpm run build"
+  },
+  "packageManager": "pnpm@10.13.1",
+  "devDependencies": {
+    "@eslint/js": "^9.32.0",
+    "@types/node": "^24.1.0",
+    "@typescript-eslint/eslint-plugin": "^8.38.0",
+    "@typescript-eslint/parser": "^8.38.0",
+    "@vitest/coverage-v8": "3.2.4",
+    "eslint": "^9.32.0",
+    "globals": "^16.3.0",
+    "jiti": "^2.5.1",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.38.0",
+    "vitest": "^3.2.4"
+  }
+}
